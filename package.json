@@ -1,0 +1,52 @@
+{
+  "name": "voter",
+  "description": "Simple voter app",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Max Burov <mabu@hellofresh.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "echo 'Setup entry point'",
+    "build": "echo 'Setup build point'",
+    "lint": "eslint -c ./.eslintrc",
+    "lint:diff": "git diff --cached --name-only --diff-filter=d HEAD | grep \\.js$ | xargs eslint -c ./.eslintrc --max-warnings 0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:diff"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-fbjs": "^3.1.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-flowtype": "^4.7.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5"
+  }
+}
