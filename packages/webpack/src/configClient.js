@@ -6,7 +6,9 @@ const isDev = process.env.NODE_ENV === 'development';
 
 const plugins = isDev ? [new HotModuleReplacementPlugin()] : [new CleanWebpackPlugin()];
 
-const entry = isDev ? ['webpack-hot-middleware/client', '@v/client'] : '@v/client';
+const entry = isDev
+  ? ['webpack-hot-middleware/client', 'react-hot-loader/patch', '@v/client']
+  : '@v/client';
 
 export default {
   mode: process.env.NODE_ENV || 'production',
@@ -27,7 +29,19 @@ export default {
           name: '[name].[ext]',
         },
       },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|dist)/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
     ],
+  },
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
   },
   devtool: isDev ? 'inline-source-map' : false,
 };

@@ -1,7 +1,4 @@
 import '@v/assets/favicon.png';
+import { mount } from './src/mount';
 
-console.log('This is client'); // eslint-disable-line no-console
-
-if (module.hot) {
-  module.hot.accept();
-}
+mount();

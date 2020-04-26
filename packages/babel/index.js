@@ -1,9 +1,5 @@
 // use babel for es6 syntax
-require('@babel/register')({
-  ignore: [/(node_modules)/],
-  presets: ['@babel/preset-env'],
-  plugins: ['@babel/plugin-proposal-object-rest-spread'],
-});
+require('@babel/register')();
 
 // polyfill
 require('@babel/polyfill');
