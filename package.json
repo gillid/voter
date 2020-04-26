@@ -6,7 +6,7 @@
   "author": "Max Burov <mabu@hellofresh.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "echo 'Setup entry point'",
+    "start": "node packages/server/start",
     "build": "webpack --config packages/webpack/build",
     "lint": "eslint -c ./.eslintrc",
     "lint:diff": "git diff --cached --name-only --diff-filter=d HEAD | grep \\.js$ | xargs eslint -c ./.eslintrc --max-warnings 0"
@@ -35,7 +35,9 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.9.5",
     "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.9.5",
-    "@babel/register": "^7.9.0"
+    "@babel/register": "^7.9.0",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
