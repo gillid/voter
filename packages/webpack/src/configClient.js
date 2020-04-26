@@ -1,13 +1,17 @@
 import path from 'path';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import { HotModuleReplacementPlugin } from 'webpack';
 
 const isDev = process.env.NODE_ENV === 'development';
 
-const plugins = isDev ? [] : [new CleanWebpackPlugin()];
+const plugins = isDev ? [new HotModuleReplacementPlugin()] : [new CleanWebpackPlugin()];
+
+const entry = isDev ? ['webpack-hot-middleware/client', '@v/client'] : '@v/client';
 
 export default {
   mode: process.env.NODE_ENV || 'production',
-  entry: '@v/client',
+  entry,
+  target: 'web',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, '../../../dist/assets'),

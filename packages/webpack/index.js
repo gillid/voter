@@ -1,1 +1,1 @@
-export * from './src/devMiddleware';
+export * from './src/useWebpackMiddleware';
