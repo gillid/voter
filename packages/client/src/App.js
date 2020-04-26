@@ -1,14 +1,16 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
 import { Global } from '@emotion/core';
+import { Provider } from 'react-redux';
+import { createStore } from '@v/store';
 import { Header, Main } from '@v/design-system';
 
 export const App = hot(() => (
-  <React.Fragment>
+  <Provider store={createStore()}>
     <Global styles={styles} />
     <Header />
     <Main />
-  </React.Fragment>
+  </Provider>
 ));
 
 const styles = {
