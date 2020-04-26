@@ -14,5 +14,16 @@ export default {
     publicPath: '/assets',
   },
   plugins,
+  module: {
+    rules: [
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        },
+      },
+    ],
+  },
   devtool: isDev ? 'inline-source-map' : false,
 };
