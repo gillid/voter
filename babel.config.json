@@ -1,7 +1,9 @@
 {
   "ignore": ["node_modules", "dist"],
   "presets": [
-    "@babel/preset-env", "@babel/preset-react"
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@emotion/babel-preset-css-prop"
   ],
   "plugins": [
     "@babel/plugin-proposal-object-rest-spread",

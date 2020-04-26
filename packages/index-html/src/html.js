@@ -34,6 +34,7 @@ export const html = `
             font-family: sans-serif;
         }
         noscript {
+            display: block;
             padding: 20px;
             text-align: center;
         }
@@ -41,9 +42,10 @@ export const html = `
             text-align: center;
             padding: 20px;
             font-size: 40px;
+            line-height: 1;
             font-weight: bold;
             color: %COLOR_BG%;
-            text-shadow: 0 0 2px %COLOR_PRIMARY%, 0 0 6px %COLOR_PRIMARY%;
+            text-shadow: 0 0 2px %COLOR_PRIMARY%, 0 0 6px %COLOR_PRIMARY%, 0 0 8px %COLOR_PRIMARY%;
         }
         @media screen and (min-width: 768px) {
             .header {
@@ -55,7 +57,7 @@ export const html = `
 </head>
 <body>
 <div id="root">
-    <div class="header">✔oter</div>
+    <header class="header">✔oter</header>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 </div>
 <script type="text/javascript" src="%ASSETS_PATH%/main.js"></script>
