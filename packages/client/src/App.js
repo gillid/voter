@@ -4,6 +4,7 @@ import { Global } from '@emotion/core';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { createStore } from '@v/store';
+import { RootRouter } from '@v/router';
 import { Header, Main } from '@v/design-system';
 
 const { store, persistor } = createStore();
@@ -16,7 +17,9 @@ export const App = hot(() => (
     <Provider store={store}>
       <PersistGate persistor={persistor} loading={<Loading />}>
         <Header />
-        <Main />
+        <Main>
+          <RootRouter />
+        </Main>
       </PersistGate>
     </Provider>
   </React.Fragment>

@@ -4,8 +4,11 @@ import { setUser } from './actions';
 
 export const useUser = () => {
   const dispatch = useDispatch();
+  const id = useSelector((state) => get(state, 'user.id'));
+
   return {
-    id: useSelector((state) => get(state, 'user.id')),
+    isAuthorized: Boolean(id),
+    id,
     name: useSelector((state) => get(state, 'user.name')),
     setUser: (name) => dispatch(setUser(name)),
   };
