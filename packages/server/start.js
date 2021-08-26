@@ -1,4 +1,4 @@
 require('dotenv').config();
-require('@v/babel');
+require('@/babel');
 
 require('./index');

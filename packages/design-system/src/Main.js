@@ -1,5 +1,5 @@
 import React from 'react';
-import { BREAKPOINTS, MEDIA } from '@v/constants';
+import { BREAKPOINTS, MEDIA } from '@/constants';
 
 export const Main = ({ children }) => <main css={styles.page}>{children}</main>;
 

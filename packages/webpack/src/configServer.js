@@ -2,7 +2,7 @@ import path from 'path';
 
 export default {
   mode: 'production',
-  entry: '@v/server',
+  entry: '@/server',
   target: 'node',
   output: {
     filename: 'server.js',

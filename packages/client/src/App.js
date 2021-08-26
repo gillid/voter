@@ -3,9 +3,9 @@ import { hot } from 'react-hot-loader/root';
 import { Global } from '@emotion/core';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { createStore } from '@v/store';
-import { RootRouter } from '@v/router';
-import { Header, Main } from '@v/design-system';
+import { createStore } from '@/store';
+import { RootRouter } from '@/router';
+import { Header, Main } from '@/design-system';
 
 const { store, persistor } = createStore();
 

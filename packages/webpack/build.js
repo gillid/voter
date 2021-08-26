@@ -1,5 +1,5 @@
 require('dotenv').config();
-require('@v/babel');
+require('@/babel');
 
 const client = require('./src/configClient').default;
 const server = require('./src/configServer').default;

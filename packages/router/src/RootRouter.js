@@ -1,6 +1,6 @@
 import React from 'react';
-import { useUser } from '@v/store';
-import { PageLogin } from '@v/components';
+import { useUser } from '@/store';
+import { PageLogin } from '@/components';
 
 export const RootRouter = () => {
   const { isAuthorized } = useUser();

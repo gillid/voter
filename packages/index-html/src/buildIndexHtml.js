@@ -1,4 +1,4 @@
-import { COLOR } from '@v/constants';
+import { COLOR } from '@/constants';
 import { html } from './html';
 
 export const buildIndexHtml = () => {

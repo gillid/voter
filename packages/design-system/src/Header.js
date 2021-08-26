@@ -1,5 +1,5 @@
 import React from 'react';
-import { COLOR, MEDIA } from '@v/constants';
+import { COLOR, MEDIA } from '@/constants';
 
 export const Header = () => (
   <header css={styles.header}>

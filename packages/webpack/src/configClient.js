@@ -7,8 +7,8 @@ const isDev = process.env.NODE_ENV === 'development';
 const plugins = isDev ? [new HotModuleReplacementPlugin()] : [new CleanWebpackPlugin()];
 
 const entry = isDev
-  ? ['webpack-hot-middleware/client', 'react-hot-loader/patch', '@v/client']
-  : '@v/client';
+  ? ['webpack-hot-middleware/client', 'react-hot-loader/patch', '@/client']
+  : '@/client';
 
 export default {
   mode: process.env.NODE_ENV || 'production',
